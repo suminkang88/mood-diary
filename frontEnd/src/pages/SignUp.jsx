@@ -10,7 +10,7 @@ function SignUp() {
   const handleSignup = async () => {
     try {
       //await: 응답이 올 때까지 그 줄만 잠깐 멈춤.
-      const res = await api.post("signup/", {
+      const res = await api.post("accounts/signup/", {
         username,
         password,
       });

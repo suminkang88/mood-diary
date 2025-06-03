@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import api from "../api/axios"; // axios 인스턴스 import
 
-function MoodForm() {
+function MoodForm({ setRefresh }) {
   const [emoticon, setEmoticon] = useState("");
   const [memo, setMemo] = useState("");
   const [message, setMessage] = useState("");
@@ -18,6 +18,7 @@ function MoodForm() {
         setMessage("오늘의 감정이 성공적으로 기록되었습니다.");
         setMemo("");
         setEmoticon("");
+        setRefresh(true);
       } else {
         setMessage("감정 기록에 실패했습니다.");
       }
