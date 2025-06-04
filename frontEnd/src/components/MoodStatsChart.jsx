@@ -20,9 +20,9 @@ const MoodStatsChart = () => {
         const allEmotions = ["happy", "sad", "neutral", "angry", "tired"];
 
         //API 응답 결과에서 allEmotions 배열을 기준으로 누락된 감정도 count: 0으로 채워서 항상 5개의 감정 데이터를 만들기 위한 처리
-        const completeData = allEmotions.map((emo) => {
+        const completeData = allEmotions.map((emoti) => {
           const found = result.data.find((r) => r.emoticon === emo);
-          return { emoticon: emo, count: found ? found.count : 0 };
+          return { emoticon: emoti, count: found ? found.count : 0 };
         });
 
         setData(completeData);
