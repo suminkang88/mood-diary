@@ -8,6 +8,7 @@ import { useState } from "react";
 import Home from "./pages/Home";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
+import StatsPage from "./pages/StatsPage";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
@@ -31,6 +32,7 @@ function App() {
           path="/login"
           element={isAuthenticated ? <Navigate to="/" /> : <LogIn />}
         />
+        <Route path="/stats" element={<StatsPage />} />
       </Routes>
     </Router>
   );
